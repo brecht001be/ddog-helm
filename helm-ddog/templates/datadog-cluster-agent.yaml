@@ -42,6 +42,8 @@ spec:
             value: .*
           - name: DD_CONTAINER_INCLUDE_LOGS
             value: .*
+          - name: DD_CLUSTER_CHECKS_ENABLED
+            value: "true"
 ---
 apiVersion: v1
 kind: Service
