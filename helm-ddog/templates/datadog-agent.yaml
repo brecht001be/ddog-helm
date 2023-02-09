@@ -48,6 +48,10 @@ spec:
             value: "true"
           - name: DD_CONTAINER_INCLUDE
             value: .*
+          - name: DD_CONTAINER_INCLUDE_METRICS
+            value: .*
+          - name: DD_CONTAINER_INCLUDE_LOGS
+            value: .*
         resources:
           requests:
             memory: "256Mi"
