@@ -44,6 +44,8 @@ spec:
               secretKeyRef:
                 name: datadog-auth-token
                 key: token
+          - name: DD_LOGS_ENABLED
+            value: "true"
         resources:
           requests:
             memory: "256Mi"
