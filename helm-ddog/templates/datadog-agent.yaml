@@ -28,7 +28,7 @@ spec:
             protocol: TCP
         env:
           - name: DD_API_KEY
-            value: "8b3e9796cef6845994616c5811e00ac5"
+            value: {{ template .Values.apiKey }}
           - name: DD_COLLECT_KUBERNETES_EVENTS
             value: "true"
           - name: KUBERNETES
