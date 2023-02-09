@@ -46,6 +46,8 @@ spec:
                 key: token
           - name: DD_LOGS_ENABLED
             value: "true"
+          - name: DD_CONTAINER_INCLUDE
+            value: .*
         resources:
           requests:
             memory: "256Mi"
