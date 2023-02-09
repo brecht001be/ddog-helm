@@ -20,7 +20,7 @@ spec:
         name: datadog-cluster-agent
         env:
           - name: DD_API_KEY
-            value: {{ template .Values.apiKey }}
+            value: "{{ template .Values.apiKey }}"
           - name: DD_APP_KEY		# Optional
             value: <YOUR_APP_KEY>	# Optional
           - name: DD_COLLECT_KUBERNETES_EVENTS
