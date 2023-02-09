@@ -34,6 +34,14 @@ spec:
               secretKeyRef:
                 name: datadog-auth-token
                 key: token
+          - name: DD_LOGS_ENABLED
+            value: "true"
+          - name: DD_CONTAINER_INCLUDE
+            value: .*
+          - name: DD_CONTAINER_INCLUDE_METRICS
+            value: .*
+          - name: DD_CONTAINER_INCLUDE_LOGS
+            value: .*
 ---
 apiVersion: v1
 kind: Service
