@@ -52,8 +52,6 @@ spec:
             value: .*
           - name: DD_CONTAINER_INCLUDE_LOGS
             value: .*
-          - name: DD_AUTOCONFIG_INCLUDE_FEATURES
-            value: "containerd"
         resources:
           requests:
             memory: "256Mi"
