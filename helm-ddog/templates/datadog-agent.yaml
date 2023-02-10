@@ -17,6 +17,7 @@ spec:
       - image: public.ecr.aws/datadog/agent:latest
         imagePullPolicy: Always
         name: datadog-agent
+        criSocketPath: /run/dockershim.sock
         ports:
           - containerPort: 8125
             # hostPort: 8125
@@ -52,6 +53,8 @@ spec:
             value: .*
           - name: DD_CONTAINER_INCLUDE_LOGS
             value: .*
+          - name: DD_AUTOCONFIG_INCLUDE_FEATURES
+            value: "containerd"
         resources:
           requests:
             memory: "256Mi"
