@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helm
+  namespace: default
+spec:
+  project: default
+  source:
+    chart: datadog
+    repoURL: https://github.com/DataDog/helm-charts/tree/main/charts
+    targetRevision: 1.16.1
+    helm:
+      releaseName: ddog-ch
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
+name: helm
+version: 3.10.6
