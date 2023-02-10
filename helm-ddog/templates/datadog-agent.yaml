@@ -17,7 +17,6 @@ spec:
       - image: public.ecr.aws/datadog/agent:latest
         imagePullPolicy: Always
         name: datadog-agent
-        criSocketPath: /run/dockershim.sock
         ports:
           - containerPort: 8125
             # hostPort: 8125
